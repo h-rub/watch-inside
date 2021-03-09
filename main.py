@@ -20,7 +20,7 @@ def on_moved(event):
     print("Moved")
 
 if __name__ == '__main__':
-    event_hadler = FileSystemEventHandler()
+    event_handler = FileSystemEventHandler()
 
     # Calling functions to handle events
     event_hadler.on_created = on_created
