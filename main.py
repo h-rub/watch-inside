@@ -21,15 +21,13 @@ def on_moved(event):
 
 if __name__ == '__main__':
     event_handler = FileSystemEventHandler()
-
     # Calling functions to handle events
-    event_hadler.on_created = on_created
-    event_hadler.on_deleted = on_deleted
-    event_hadler.on_modified = on_modified
-    event_hadler.on_moved = on_moved
+    event_handler.on_created = on_created
+    event_handler.on_deleted = on_deleted
+    event_handler.on_modified = on_modified
+    event_handler.on_moved = on_moved
 
     path = "/Users/heverrubio/dev/py-dev/watchsy/folder_test"
-
     observer = Observer()
     observer.schedule(event_handler, path, recursive=True)
     observer.start()
